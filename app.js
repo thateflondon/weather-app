@@ -1,10 +1,13 @@
 // Ville par défaut
-let ville = "Douala";
+let ville = 'Douala';
+
+//Afficher la température d'une ville en changeant de ville
+recevoirTemperature(ville);
 
 //Création de l'évènement
 let changerDeVille = document.querySelector('#changer');
 changerDeVille.addEventListener('click', () => {
-    villeChoisie = prompt('Saisissez le nom d\'une ville');
+    ville = prompt('Saisissez le nom d\'une ville');
     //permet d'afficher la température de la ville par défaut
     recevoirTemperature(ville);
 });
@@ -33,7 +36,7 @@ function recevoirTemperature(ville) {
                 let ville = reponse.name;
                 document.querySelector('#ville').textContent = ville;
             } else {
-                alert('Un problème est survenu, merci de revenir plus tard.');
+                alert('Un problème est survenu, veuillez entrer un nom de ville valide.');
             }
         }
     }

@@ -17,6 +17,9 @@ requete.onload = function () {
             //console.log(reponse);
             let temperature = reponse.main.temp;
             document.querySelector('#temperature_label').textContent = temperature;
+            //let reponseVille = requete.response;
+            let ville = reponse.name;
+            document.querySelector('#ville').textContent = ville;
         } else {
             alert('Un problème est survenu, merci de revenir plus tard.');
         }
